@@ -127,6 +127,7 @@ class _AddressScreenState extends State<AddressScreen> {
                                   "Insira a sua cidade.",
                                 );
                               },
+                              charLimit: 168,
                             ),
                           ),
                           Padding(
@@ -139,6 +140,7 @@ class _AddressScreenState extends State<AddressScreen> {
                                   "Insira o seu bairro.",
                                 );
                               },
+                              charLimit: 100,
                               placeholder: "Bairro",
                               keyboardType: TextInputType.text,
                             ),
@@ -155,6 +157,7 @@ class _AddressScreenState extends State<AddressScreen> {
                                 );
                               },
                               keyboardType: TextInputType.text,
+                              charLimit: 200,
                             ),
                           ),
                           Padding(
@@ -170,6 +173,7 @@ class _AddressScreenState extends State<AddressScreen> {
                                   "Insira o número da sua casa.",
                                 );
                               },
+                              charLimit: 7,
                             ),
                           ),
                           const Padding(

@@ -1,5 +1,5 @@
 import 'package:farmafacil_colaborador/database/authentication.dart';
-import 'package:farmafacil_colaborador/screens/home_screen.dart';
+import 'package:farmafacil_colaborador/screens/main_screen.dart';
 import 'package:farmafacil_colaborador/utils/login_cookie.dart';
 import 'package:farmafacil_colaborador/utils/navigate.dart';
 import 'package:flutter/material.dart';
@@ -58,7 +58,7 @@ class LoginController {
 
         if (requestResponse.statusCode == 200) {
           LoginCookie.save();
-          Navigate.navigateAndRemoveAllRoutes(context, const HomeScreen());
+          Navigate.navigateAndRemoveAllRoutes(context, const MainScreen());
         } else {
           const snackBar = SnackBar(
             content: Text(

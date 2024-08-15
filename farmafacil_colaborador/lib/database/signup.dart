@@ -28,7 +28,6 @@ class Signup {
       }
     };
 
-    // TODO: dá pra criar uma classe Requests e nela ter send e receive
     final response = http.post(
       Uri.parse('${DatabaseConfig.baseUrl}/signup'),
       headers: <String, String>{

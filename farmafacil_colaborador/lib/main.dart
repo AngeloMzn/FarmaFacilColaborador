@@ -1,4 +1,4 @@
-import 'package:farmafacil_colaborador/screens/home_screen.dart';
+import 'package:farmafacil_colaborador/screens/main_screen.dart';
 import 'package:farmafacil_colaborador/theme/application_theme.dart';
 import 'package:farmafacil_colaborador/utils/login_cookie.dart';
 import 'package:flutter/material.dart';
@@ -30,7 +30,7 @@ class FarmaFacilColaborador extends StatelessWidget {
       ],
       theme: ApplicationThemes.defaultTheme,
       home: Scaffold(
-        body: loggedIn? const HomeScreen() : const LoginScreen(),
+        body: loggedIn? const MainScreen() : const LoginScreen(),
       ),
     );
   }
