@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 
 class ProductListItem extends StatelessWidget {
   final Product product;
-  const ProductListItem({super.key, required this.product});
+  final void Function() onTap;
+  const ProductListItem({super.key, required this.product, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,7 @@ class ProductListItem extends StatelessWidget {
       child: Card(
         child: InkWell(
           borderRadius: BorderRadius.circular(12),
-          onTap: () {},
+          onTap: onTap,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [

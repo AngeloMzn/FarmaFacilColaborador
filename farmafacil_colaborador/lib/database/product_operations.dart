@@ -14,6 +14,14 @@ class ProductOperations {
     return compute(parsePictures, response.body);
   }
 
+  Future<List<Product>> getLastTwo() async {
+    final response = await http.get(
+      Uri.parse('${DatabaseConfig.baseUrl}/products/lasttwo'),
+    );
+
+    return compute(parsePictures, response.body);
+  }
+
   List<Product> parsePictures(String responseBody) {
     final parsed =
         (jsonDecode(responseBody) as List).cast<Map<String, dynamic>>();
